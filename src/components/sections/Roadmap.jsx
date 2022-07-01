@@ -13,6 +13,7 @@ const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
+  /*  */
 `;
 
 const Title = styled.h1`
@@ -159,7 +160,8 @@ const Roadmap = () => {
             start: 'top center+=200px',
             end:'bottom center',
             scrub:true,
-            markers:true,
+            // markers:true,
+            // 
           },
         }
       );
