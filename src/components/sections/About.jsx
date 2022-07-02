@@ -12,7 +12,7 @@ const Section = styled.section`
   min-height: 100vh;
   width: 100%;
   background-color: ${(props) => props.theme.text};
-  /* color: ${(props) => props.theme.body}; */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ const ButtonContainer = styled.div`
 
 const About = () => {
   return (
-    <Section>
+    <Section id='about'>
       <Container>
         <Box>
           <Carousel />

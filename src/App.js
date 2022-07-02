@@ -22,6 +22,8 @@ import GlobalStyles from './styles/GlobalStyles';
 
 import {light} from './styles/Themes'
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
     <>
@@ -35,6 +37,7 @@ function App() {
         <Team/>
         <Faq/>
         <Footer/>
+        <ScrollToTop />
       </ThemeProvider>
     </>
   );
