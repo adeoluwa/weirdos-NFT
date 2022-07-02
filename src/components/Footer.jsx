@@ -2,6 +2,8 @@ import React from 'react'
 
 import styled from 'styled-components'
 
+import Banner from './Banner';
+
 const Section = styled.div`
   min-height: 100vh;
   width: 100vw;
@@ -10,15 +12,15 @@ const Section = styled.div`
   color: ${(props) => props.theme.text};
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   flex-direction: column;
 `;
 
 const Footer = () => {
   return (
     <Section>
-      Footer
+      <Banner />
     </Section>
   )
 }
