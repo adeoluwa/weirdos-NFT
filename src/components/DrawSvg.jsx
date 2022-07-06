@@ -18,8 +18,13 @@ const VectorContainer = styled.div`
   overflow: hidden;
 
   svg {
+    display: inline-block;
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 48em) {
+    left: 1rem;
   }
 `;
 
@@ -38,6 +43,10 @@ const Ball = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.theme.text};
   animation: ${Bounce} 0.5s linear infinite alternate;
+
+  @media (max-width: 48em) {
+    left: 1rem;
+  }
 `;
 
 const DrawSvg = () => {
@@ -88,6 +97,7 @@ const DrawSvg = () => {
       if (t1) t1.kill();
     };
   }, []);
+
   return (
     <>
       <Ball ref={ballRef} />
