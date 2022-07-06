@@ -147,7 +147,7 @@ const Team = () => {
       <ConfettiComponent />
       <Title>Team</Title>
       <Container>
-        <MemeberComponenet img={img5} name="Black Panther" position="Founder" />
+        <MemeberComponenet img={img5} name="Black Shinobi" position="Founder" />
         <MemeberComponenet img={img1} name="Ashanti" position="Co Founder" />
         <MemeberComponenet img={img2} name="Jiraya" position="Artist" />
         <MemeberComponenet img={img3} name="Nagato" position="Director" />
@@ -164,7 +164,7 @@ const Team = () => {
         />
         <MemeberComponenet
           img={img8}
-          name="Black Shinobi"
+          name="Code Beast"
           position="Dev lead"
         />
         <MemeberComponenet
