@@ -1,22 +1,6 @@
-import React from 'react';
+import styled from "styled-components";
 
-import styled from 'styled-components';
-
-import img1 from '../assets/Nfts/bighead.svg';
-
-import img2 from '../assets/Nfts/bighead-1.svg';
-
-import img3 from '../assets/Nfts/bighead-2.svg';
-
-import img4 from '../assets/Nfts/bighead-3.svg';
-
-import img5 from '../assets/Nfts/bighead-4.svg';
-
-import img6 from '../assets/Nfts/bighead-5.svg';
-
-// import Button from './Button';
-
-const Section = styled.section`
+export const Section = styled.section`
   width: 100vw;
   height: 25rem;
   position: relative;
@@ -37,7 +21,7 @@ const Section = styled.section`
   }
 `;
 
-const ImgContainer = styled.div`
+export const ImgContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 50%;
@@ -65,7 +49,7 @@ const ImgContainer = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
   color: ${(props) => props.theme.body};
   padding: 1rem 2rem;
@@ -88,7 +72,7 @@ const Title = styled.h1`
   }
 `;
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   width: 35%;
   display: flex;
   justify-content: flex-end;
@@ -99,7 +83,7 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const JoinNow = styled.button`
+export const JoinNow = styled.button`
   display: inline-block;
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
@@ -144,27 +128,3 @@ const JoinNow = styled.button`
     padding: 0.3rem;
   }
 `;
-
-const Banner = () => {
-  return (
-    <Section>
-      <ImgContainer>
-        <img src={img1} alt="The Weirdos" />
-        <img src={img2} alt="The Weirdos" />
-        <img src={img3} alt="The Weirdos" />
-        <img src={img4} alt="The Weirdos" />
-        <img src={img5} alt="The Weirdos" />
-        <img src={img6} alt="The Weirdos" />
-      </ImgContainer>
-      <Title>
-        Join the <br /> weirdos club
-      </Title>
-      <ButtonContainer>
-        {/* <Button text="join now" link="#" /> */}
-        <JoinNow>Join Now</JoinNow>
-      </ButtonContainer>
-    </Section>
-  );
-};
-
-export default Banner;

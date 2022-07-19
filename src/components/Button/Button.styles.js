@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Btn = styled.button`
+
+export const Btn = styled.button`
   display: inline-block;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
@@ -37,15 +37,3 @@ const Btn = styled.button`
     padding: 0.3rem;
   }
 `;
-
-const Button = ({ text, link }) => {
-  return (
-    <Btn>
-      <a href={link} aria-label={text} target="_blank" rel="noreferrer">
-        {text}
-      </a>
-    </Btn>
-  );
-};
-
-export default Button;

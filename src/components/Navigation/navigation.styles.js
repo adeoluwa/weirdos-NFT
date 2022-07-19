@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import styled from "styled-components";
 
-import styled from 'styled-components';
-
-import Logo from './Logo';
-
-import Button from './Button';
-
-const Section = styled.section`
+export const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};
 `;
 
-const NavBar = styled.nav`
+export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +29,7 @@ const NavBar = styled.nav`
   }
 `;
 
-const Menu = styled.ul`
+export const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +59,7 @@ const Menu = styled.ul`
   }
 `;
 
-const MenuItem = styled.li`
+export const MenuItem = styled.li`
   margin: 0 1rem;
   color: ${(props) => props.theme.text};
   cursor: pointer;
@@ -92,7 +86,7 @@ const MenuItem = styled.li`
   }
 `;
 
-const HamburgerMenu = styled.span`
+export const HamburgerMenu = styled.span`
   width: ${(props) => (props.click ? '2rem' : '1.5rem')};
   height: 2px;
   background: ${(props) => props.theme.text};
@@ -137,50 +131,3 @@ const HamburgerMenu = styled.span`
     transform: ${(props) => (props.click ? 'rotate(40deg) ' : 'rotate(0)')};
   }
 `;
-
-const Navigation = () => {
-  const [click, setClick] = useState(false);
-
-  const scrollTo = (id) => {
-    let element = document.getElementById(id);
-
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-    setClick(!click);
-  };
-
-  return (
-    <Section id="navigation">
-      <NavBar>
-        <Logo />
-        <HamburgerMenu click={click} onClick={() => setClick(!click)}>
-          &nbsp;
-        </HamburgerMenu>
-
-        <Menu click={click}>
-          <MenuItem onClick={() => scrollTo('home')}>Home</MenuItem>
-          <MenuItem onClick={() => scrollTo('about')}>About</MenuItem>
-          <MenuItem onClick={() => scrollTo('roadmap')}>Roadmap</MenuItem>
-          <MenuItem onClick={() => scrollTo('showcase')}>Showcase</MenuItem>
-          <MenuItem onClick={() => scrollTo('team')}>Team</MenuItem>
-          <MenuItem onClick={() => scrollTo('faq')}>Faq</MenuItem>
-
-          <MenuItem>
-            <div className="mobile">
-              <Button text="Connect Wallet" link="https://google.com" />
-            </div>
-          </MenuItem>
-        </Menu>
-
-        <div className="desktop">
-          <Button text="Connect Wallet" link="https://google.com" />
-        </div>
-      </NavBar>
-    </Section>
-  );
-};
-
-export default Navigation;
