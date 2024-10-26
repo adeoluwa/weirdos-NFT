@@ -9,7 +9,22 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="fa2649c6-d302-4fc5-85c7-737d7c84f1a4"></script>
+      <!-- Matomo -->
+      <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="https://weirdofcnetlifyapp.matomo.cloud/";
+          _paq.push(['setTrackerUrl', u+'matomo.php']);
+          _paq.push(['setSiteId', '1']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.async=true; g.src='https://cdn.matomo.cloud/weirdofcnetlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+      </script>
+    <!-- End Matomo Code -->
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
